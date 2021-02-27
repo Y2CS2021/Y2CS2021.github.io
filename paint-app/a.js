@@ -4,7 +4,7 @@ var happy = "DIE";
 var optionsMenuShown = false;
 var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
-var colour;
+var lineColour;
 
 
 function updateThicknessValue(value) {
@@ -12,7 +12,7 @@ function updateThicknessValue(value) {
 }
 
 function updateColoursValue(value) {
-    colour = value;
+    lineColour = value;
 }
 
 function updateAlphaValue(value) {
