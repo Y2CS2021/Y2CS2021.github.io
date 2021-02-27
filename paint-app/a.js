@@ -6,7 +6,7 @@ var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
 var lineColour = document.getElementById('colour-picker').value;;
 
-console.log(lineColour);
+console.log(colourAlpha);
 
 function updateThicknessValue(value) {
     thickness = value;
