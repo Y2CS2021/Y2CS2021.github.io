@@ -4,7 +4,8 @@ var happy = "DIE";
 var optionsMenuShown = false;
 var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
-var lineColour = document.getElementById('colour-picker').value;;
+var lineColour = document.getElementById('colour-picker').value;
+var tool;
 
 console.log(colourAlpha);
 
@@ -28,12 +29,11 @@ function showOptionsMenu(value) {
     optionsMenuShown = !optionsMenuShown;
 }
 
-
-function fix()
-{
-    var el = this;
-    var par = el.parentNode;
-    var next = el.nextSibling;
-    par.removeChild(el);
-    setTimeout(function() {par.insertBefore(el, next);}, 0)
+function Tool(tool) {
+	this.tool = tool;
 }
+
+
+document.getElementById('canvas').addEventListener("mousedown", function() {
+	
+});
