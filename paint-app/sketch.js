@@ -13,8 +13,6 @@ function mouseDragged() {
   stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
   strokeWeight(thickness);
   
-  console.log(thickness);
-  console.log(colourAlpha);
   line(pmouseX, pmouseY, mouseX, mouseY);
 }
 
@@ -22,6 +20,9 @@ function mousePressed() {
 	if (tool == "line") {
     	start = createVector(mouseX, mouseY);
 		print('started');
+	}
+	else {
+		
 	}
 }
 function mouseReleased() {
