@@ -15,6 +15,7 @@
         <div class="colour-options-container">
           <input type="color" id="colour-picker" oninput="updateColoursValue(this.value)"><br>
           <input type="range" id="colour-alpha-slider" min="0" max="255" oninput="updateAlphaValue(this.value)">
+          <button oninput="updateColoursValue(random(0, 255))">RANDOM</button>
         </div>
       </div>
       <div class="thickness-options options-div">

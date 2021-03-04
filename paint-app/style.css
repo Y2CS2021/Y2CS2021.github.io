@@ -15,6 +15,7 @@ options {
   z-index: 1;
   background-color: red;
   position:fixed;
+  color: 255, 0, 0;
 }
 
 options-div {

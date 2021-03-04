@@ -35,8 +35,11 @@ function Tool(tool) {
 
 
 document.addEventListener('keydown', function(event) {
-    if(event.key == 'Control' && event.key == 'b') {
+    if(event.key == 'b') {
         tool = "line";
         alert("line"); 
     }
+	else if (event.key == 'p') {
+		tool = "pen";
+	}
 });
