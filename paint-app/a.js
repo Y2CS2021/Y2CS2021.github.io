@@ -42,4 +42,5 @@ document.addEventListener('keydown', function(event) {
         this.tool = "line";
         alert("line");
     }
+    alert(event.key);
 });
