@@ -38,10 +38,8 @@ document.addEventListener('keypress', function(event) {
 })
 
 document.addEventListener('keydown', function(event) {
-    if(event.key == 113) {
-        alert('Left was pressed');
-    }
-    else if(event.key == 39) {
-        alert('Right was pressed');
+    if(event.key == 2) {
+        this.tool = "line";
+        alert("line");
     }
 });
