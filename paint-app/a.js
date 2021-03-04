@@ -33,14 +33,10 @@ function Tool(tool) {
 	this.tool = tool;
 }
 
-document.addEventListener('keypress', function(event) {
-    alert('Handler for .keypress() called. - ' + event.which);
-})
 
 document.addEventListener('keydown', function(event) {
     if(event.key == 'Control' || event.key == 'b') {
         tool = "line";
         alert("line"); 
     }
-    alert(event.key);
 });
