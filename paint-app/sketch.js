@@ -9,11 +9,13 @@ function setup() {
 }
 
 function mouseDragged() {
-  var strokeColour = color(lineColour);
-  stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
-  strokeWeight(thickness);
-  
-  line(pmouseX, pmouseY, mouseX, mouseY);
+	if (tool == "pen") {
+	  var strokeColour = color(lineColour);
+	  stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
+	  strokeWeight(thickness);
+	  
+	  line(pmouseX, pmouseY, mouseX, mouseY);
+	}
 }
 
 function mousePressed() {

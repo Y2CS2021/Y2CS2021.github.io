@@ -5,7 +5,7 @@ var optionsMenuShown = false;
 var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
 var lineColour = document.getElementById('colour-picker').value;
-var tool;
+var tool = "pen";
 
 console.log(colourAlpha);
 
