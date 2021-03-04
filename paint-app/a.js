@@ -38,7 +38,7 @@ document.addEventListener('keypress', function(event) {
 })
 
 document.addEventListener('keydown', function(event) {
-    if(event.code == 2) {
+    if(event.key == 'Control') {
         this.tool = "line";
         alert("line");
     }
