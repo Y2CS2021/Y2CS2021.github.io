@@ -40,7 +40,7 @@ document.addEventListener('keypress', function(event) {
 document.addEventListener('keydown', function(event) {
     if(event.key == 'Control' || event.key == 'b') {
         this.tool = "line";
-        alert("line");
+        alert("line"); 
     }
     alert(event.key);
 });
