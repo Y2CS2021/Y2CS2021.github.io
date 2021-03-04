@@ -26,7 +26,8 @@ function mousePressed() {
 function mouseReleased() {
 	if (tool == "line") {
     end = createVector(mouseX, mouseY);
+    line(start.x, start.y, end.x, end.y);
+
   }
 
-  line(start.x, start.y, end.x, end.y);
 }
