@@ -30,7 +30,6 @@ function mousePressed() {
 function mouseReleased() {
 	if (tool == "line") {
     end = createVector(mouseX, mouseY);
-		alert('hello');
 
     line(start.x, start.y, end.x, end.y);
 
