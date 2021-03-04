@@ -20,13 +20,17 @@ function mouseDragged() {
 
 function mousePressed() {
 	if (tool == "line") {
-    start = createVector(mouseX, mouseY);
-  }
+    	start = createVector(mouseX, mouseY);
+		print('started');
+	}
 }
 function mouseReleased() {
 	if (tool == "line") {
     end = createVector(mouseX, mouseY);
+		alert('hello');
+
     line(start.x, start.y, end.x, end.y);
+
 
   }
 
