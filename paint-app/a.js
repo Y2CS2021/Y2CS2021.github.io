@@ -33,7 +33,14 @@ function Tool(tool) {
 	this.tool = tool;
 }
 
+document.addEventListener('keypress', function(event) {
+    alert('Handler for .keypress() called. - ' + event.which);
+})
 
-document.getElementById('canvas').addEventListener("mousedown", function() {
-	
+document.addEventListener('keydown', function(event) {
+    if(event.key == 'Control' || event.key == 'b') {
+        this.tool = "line";
+        alert("line");
+    }
+    alert(event.key);
 });

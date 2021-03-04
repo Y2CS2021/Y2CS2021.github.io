@@ -1,3 +1,6 @@
+var start;
+var end;
+
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   background(255);
@@ -16,8 +19,15 @@ function mouseDragged() {
 }
 
 function mousePressed() {
-	if ()
+	if (tool == "line") {
+    start = createVector(mouseX, mouseY);
+  }
 }
 function mouseReleased() {
-	
+	if (tool == "line") {
+    end = createVector(mouseX, mouseY);
+    line(start.x, start.y, end.x, end.y);
+
+  }
+
 }
