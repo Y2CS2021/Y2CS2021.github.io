@@ -16,6 +16,13 @@ function mouseDragged() {
 	  
 	  line(pmouseX, pmouseY, mouseX, mouseY);
 	}
+	else if (tool == "shape") {
+		vertices.push(createVector(mouseX, mouseY));
+		for (var i = 0; i < vertices.length; i++) {
+			vertex(vertices[i].x, vertices[i].y);
+		}
+	}
+	
 }
 
 function mousePressed() {
@@ -32,7 +39,6 @@ function mouseReleased() {
     end = createVector(mouseX, mouseY);
 
     line(start.x, start.y, end.x, end.y);
-
 
   }
 

@@ -6,6 +6,7 @@ var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
 var lineColour = document.getElementById('colour-picker').value;
 var tool = "pen";
+var vertices = [];
 
 console.log(colourAlpha);
 
@@ -29,10 +30,9 @@ function showOptionsMenu(value) {
     optionsMenuShown = !optionsMenuShown;
 }
 
-function Tool(tool) {
-	this.tool = tool;
+function setTool(toolIn) {
+    tool = toolIn;
 }
-
 
 document.addEventListener('keydown', function(event) {
     if(event.key == 'b') {
@@ -41,5 +41,8 @@ document.addEventListener('keydown', function(event) {
     }
 	else if (event.key == 'p') {
 		tool = "pen";
-	}
+    }
+    else if (event.key == 's') {
+        tool = "shape";
+    }
 });
