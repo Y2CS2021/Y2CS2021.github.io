@@ -18,9 +18,11 @@ function mouseDragged() {
 	}
 	else if (tool == "shape") {
 		vertices.push(createVector(mouseX, mouseY));
+		beginShape();
 		for (var i = 0; i < vertices.length; i++) {
 			vertex(vertices[i].x, vertices[i].y);
 		}
+		endShape();
 	}
 	
 }
