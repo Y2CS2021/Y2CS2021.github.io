@@ -75,9 +75,8 @@ function setTool(toolIn) {
 }
 
 document.addEventListener('keydown', function(event) {
-    if(event.key == 'b') {
+    if(event.key == 'l') {
         tool = "line";
-        alert("line"); 
     }
 	else if (event.key == 'p') {
 		tool = "pen";

@@ -1,13 +1,14 @@
 var start;
 var end;
 var strokeColourArray;
-var strokeColour = color(document.getElementById('colour-picker').value);
+var strokeColour;
+
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   background(255);
   noStroke();
-  
+  strokeColour = color(document.getElementById('colour-picker').value);
 }
 
 function mouseDragged() {
