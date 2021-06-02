@@ -16,7 +16,8 @@ function updateThicknessValue(value) {
 
 function updateColoursValue(value) {
     strokeColour = value;
-    document.getElementById('colour-picker').value = rgbToHex(value.red, value.green, value.blue);
+    alert(strokeColour + rgbToHex(value.red, value.green, value.blue));
+    //document.getElementById('colour-picker').value = rgbToHex(value.red, value.green, value.blue);
 }
 
 function rgbToHex(red, green, blue) {

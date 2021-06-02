@@ -9,10 +9,6 @@ function setup() {
   
 }
 
-function draw() {
-	console.log(strokeColour);
-}
-
 function mouseDragged() {
 	if (tool == "pen") {
 	  strokeColour = color(lineColour);
