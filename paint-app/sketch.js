@@ -40,7 +40,9 @@ function mouseDragged() {
 }
 
 function changeCanvasColour() {
-	canvasColour = color(canvasColourArray[0], canvasColourArray[1], canvasColourArray[2]);
+	if (canvasColourArray.length > 0) {
+		canvasColour = color(canvasColourArray[0], canvasColourArray[1], canvasColourArray[2]);
+	}
 	background(canvasColour);
 }
 
