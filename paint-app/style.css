@@ -1,7 +1,8 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  height:100%;
+  height: 100%;
 }
 canvas {
   display: block;
@@ -14,10 +15,17 @@ options {
   display: none;
   z-index: 1;
   background-color: red;
-  position:fixed;
+  position: fixed;
   color: 255, 0, 0;
 }
 
 options-div {
-  display:block;
+  display: block;
+}
+
+#help {
+  text-align: center;
+  margin: auto;
+  width: 70%;
+  height: 70%;
 }

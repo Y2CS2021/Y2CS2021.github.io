@@ -87,4 +87,7 @@ document.addEventListener('keydown', function(event) {
     if (event.key == 'm') {
         showOptionsMenu(!optionsMenuShown);
     }
+    if (event.key == 'h') {
+        document.getElementById('help').style.display='none';
+    }
 });
