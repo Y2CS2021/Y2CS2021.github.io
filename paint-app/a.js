@@ -69,6 +69,7 @@ function randomColour() {
 
 function setTool(toolIn) {
     tool = toolIn;
+    alert("In:" + toolIn + "Tool" + tool);
 }
 
 document.addEventListener('keydown', function(event) {
