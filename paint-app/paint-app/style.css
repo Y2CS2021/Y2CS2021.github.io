@@ -1,0 +1,23 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+}
+canvas {
+  display: block;
+  position: fixed;
+}
+
+options {
+  width: 10%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+  background-color: red;
+  position:fixed;
+  color: 255, 0, 0;
+}
+
+options-div {
+  display:block;
+}
