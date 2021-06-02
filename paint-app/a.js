@@ -45,4 +45,7 @@ document.addEventListener('keydown', function(event) {
     else if (event.key == 's') {
         tool = "shape";
     }
+    if (event.key == 'm') {
+        showOptionsMenu(!optionsMenuShown);
+    }
 });
