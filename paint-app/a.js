@@ -2,7 +2,6 @@ var canvasWidth = screen.width;
 var canvasHeight = screen.height;
 var happy = "DIE";
 var optionsMenuShown = false;
-var thickness = document.getElementById('thickness-slider').value;
 var colourAlpha = document.getElementById('colour-alpha-slider').value;
 var lineColour = document.getElementById('colour-picker').value;
 var tool = "pen";
@@ -64,8 +63,8 @@ function showOptionsMenu(value) {
 }
 
 function randomColour() {
-    var randomColourValue = color(random(0, 255), random(0, 255), random(0, 255));
-    updateColoursValue = randomColourValue;
+    var randomColourValue = [random(0, 255), random(0, 255), random(0, 255)];
+    updateColoursValue(randomColourValue);
 }
 
 function setTool(toolIn) {

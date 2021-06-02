@@ -2,6 +2,7 @@ var start;
 var end;
 var strokeColourArray;
 var strokeColour;
+var thickness;
 
 
 function setup() {
@@ -9,6 +10,7 @@ function setup() {
   background(255);
   noStroke();
   strokeColour = color(document.getElementById('colour-picker').value);
+  thickness = document.getElementById('thickness-slider').value;
 }
 
 function mouseDragged() {
