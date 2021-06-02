@@ -20,7 +20,7 @@ function setup() {
 function mouseDragged() {
 	if (tool == "pen") {
 	  var strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
-	  stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
+	  stroke('rgb(red(strokeColour), green(strokeColour), blue(strokeColour))');
 	  strokeWeight(thickness);
 	  
 	  line(pmouseX, pmouseY, mouseX, mouseY);
@@ -45,7 +45,7 @@ function mousePressed() {
 function mouseReleased() {
 	if (tool == "line") {
     end = createVector(mouseX, mouseY);
-	stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
+	stroke('rgb(red(strokeColour), green(strokeColour), blue(strokeColour))');
 	strokeWeight(thickness);
     line(start.x, start.y, end.x, end.y);
   }
