@@ -38,16 +38,13 @@ function mousePressed() {
     	start = createVector(mouseX, mouseY);
 		print('started');
 	}
-	else {
-		
-	}
 }
 function mouseReleased() {
 	if (tool == "line") {
     end = createVector(mouseX, mouseY);
 	stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
+	strokeWeight(thickness);
     line(start.x, start.y, end.x, end.y);
-
   }
 
 }
