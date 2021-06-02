@@ -23,7 +23,7 @@ function draw() {
 
 function mouseDragged() {
 	if (tool == "pen") {
-	  var strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
+	  strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
 	  stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
 	  strokeWeight(thickness);
 	  
