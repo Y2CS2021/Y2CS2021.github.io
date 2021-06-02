@@ -20,6 +20,7 @@ options {
 }
 
 options-div {
+  width: 100%;
   display: block;
   padding: 10px;
 }

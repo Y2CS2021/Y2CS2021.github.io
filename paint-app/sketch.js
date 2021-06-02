@@ -47,7 +47,7 @@ function changeCanvasColour() {
 }
 
 function clearCanvas() {
-	var confirmation = confirm("Changing the canvas colour will delete the current canvas. Are you sure you want to continue?");
+	var confirmation = confirm("Clearing the canvas will delete the current canvas. Are you sure you want to continue?");
 	if (confirmation) {
 		background(canvasColour);
 	}
