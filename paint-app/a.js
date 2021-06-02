@@ -66,22 +66,40 @@ function randomColour() {
 }
 
 function setTool(toolIn) {
-    tool = toolIn;
-    alert("In:" + toolIn + "Tool" + tool);
+    if (toolIn != null) {
+        tool = toolIn;
+        alert("In:" + toolIn + "Tool" + tool);
+    }
+    else {
+        var index = document.getElementById("toolSelect").selectedIndex;
+        switch(index) {
+            case 0:
+                tool = "pen";
+                break;
+            case 1:
+                tool = "line";
+                break;
+            case 2:
+                tool = "eraser";
+                break;
+
+        }
+        alert(tool);
+    }
 }
 
 document.addEventListener('keydown', function(event) {
     if(event.key == 'l') {
-        tool = "line";
+        setTool("line");
     }
 	else if (event.key == 'p') {
-		tool = "pen";
+		setTool("pen");
     }
     else if (event.key == 's') {
-        tool = "shape";
+        setTool("shape");
     }
     else if (event.key == 'e') {
-        tool = "eraser";
+        setTool("eraser");
     }
     else if (event.key == 'm') {
         showOptionsMenu(optionsMenuShown);
