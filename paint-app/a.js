@@ -26,10 +26,10 @@ function updateCanvasColourValue(value) {
     if (confirm) {
         canvasColourArray = value;
         changeCanvasColour();
-        document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
+        document.getElementById('canvas-colour-picker').value = rgbToHex(value[0], value[1], value[2]);
     }
     else {
-        document.getElementById('colour-picker').value = rgbToHex(canvasColour[0], canvasColour[1], canvasColour[2]);
+        document.getElementById('canvas-colour-picker').value = rgbToHex(canvasColour[0], canvasColour[1], canvasColour[2]);
     }
 }
 
