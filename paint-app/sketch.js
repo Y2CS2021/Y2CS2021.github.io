@@ -46,6 +46,13 @@ function changeCanvasColour() {
 	background(canvasColour);
 }
 
+function clearCanvas() {
+	var confirmation = confirm("Changing the canvas colour will delete the current canvas. Are you sure you want to continue?");
+	if (confirmation) {
+		background(canvasColour);
+	}
+}
+
 function mousePressed() {
 	if (tool == "line") {
     	start = createVector(mouseX, mouseY);
