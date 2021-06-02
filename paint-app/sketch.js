@@ -1,6 +1,7 @@
 var start;
 var end;
 var strokeColourArray;
+var strokeColour = color(document.getElementById('colour-picker').value);
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);

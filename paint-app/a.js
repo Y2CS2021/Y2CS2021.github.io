@@ -20,7 +20,8 @@ function updateColoursValue(value) {
 }
 
 function updateColoursValueHex(hex) {
-    updateColoursValue(rgbToHex(hex.substring(1)));
+    alert(hex);
+    updateColoursValue(hexToRgb(hex.substring(1)));
 }
 
 function rgbToHex(red, green, blue) {
