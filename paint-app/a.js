@@ -16,6 +16,7 @@ function updateThicknessValue(value) {
 
 function updateColoursValue(value) {
     lineColour = value;
+    alert(lineColour.value);
 }
 
 function updateAlphaValue(value) {
