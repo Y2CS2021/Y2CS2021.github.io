@@ -83,7 +83,7 @@ document.addEventListener('keydown', function(event) {
         tool = "shape";
     }
     if (event.key == 'm') {
-        showOptionsMenu(!optionsMenuShown);
+        showOptionsMenu(optionsMenuShown);
     }
     if (event.key == 'h') {
         document.getElementById('help').style.display='none';
