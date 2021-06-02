@@ -15,12 +15,12 @@ function updateThicknessValue(value) {
 }
 
 function updateColoursValue(value) {
-    strokeColour = value;
-    document.getElementById('colour-picker').value = rgbToHex(strokeColour.red, strokeColour.green, strokeColour.blue);
+    strokeColourArray = value;
+    document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
 }
 
 function updateColoursValueHex(hex) {
-    updateColoursValue(color(hex));
+    updateColoursValue(rgbToHex(hex));
 }
 
 function rgbToHex(red, green, blue) {
@@ -38,6 +38,15 @@ function rgbToHex(red, green, blue) {
     }
     return "#" + r + g + b;
 
+}
+
+function hexToRgb(hex) {
+    var bigint = parseInt(hex, 16);
+    var r = (bigint >> 16) & 255;
+    var g = (bigint >> 8) & 255;
+    var b = bigint & 255;
+	var rgb = [r, g, b]
+    return rgb;
 }
 
 
