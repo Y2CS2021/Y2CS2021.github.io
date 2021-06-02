@@ -10,7 +10,7 @@
   <body>
     <options id='options'>
       <div class="colour-options options-div">
-        <h3 class="options-header">Colours</h3>
+        <h3 class="options-header">Brush Colour</h3>
         <div class="colour-options-container">
           <input type="color" id="colour-picker" oninput="updateColoursValueHex(this.value)"><br>
           <!--<input type="range" id="colour-alpha-slider" min="0" max="255" oninput="updateAlphaValue(this.value)">-->
@@ -21,6 +21,13 @@
         <h3 class="options-header">Thickness</h3>
         <div class="thickness-options-container">
           <input type="range" id="thickness-slider" min="0" max="50" oninput="updateThicknessValue(this.value)">
+        </div>
+      </div>
+      <div class="canvas-colour-options options-div">
+        <h3 class="options-header">Canvas Colour</h3>
+          <input type="color" id="canvas-colour-picker" oninput="updateCanvasColourValueHex(this.value)"><br>
+          <button onclick="randomCanvasColour()">RANDOM</button>
+        <div class="canvas-colour-options-container">
         </div>
       </div>
       <div class="brush-type-options options-div">

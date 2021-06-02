@@ -17,9 +17,26 @@ function updateColoursValue(value) {
 }
 
 function updateColoursValueHex(hex) {
-    alert(hex);
     updateColoursValue(hexToRgb(hex.substring(1)));
 }
+
+
+function updateCanvasColourValue(value) {
+    var confirmation = confirm("Changing the canvas colour will delete the current canvas. Are you sure you want to continue?");
+    if (confirm) {
+        canvasColourArray = value;
+        changeCanvasColour();
+        document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
+    }
+    else {
+        document.getElementById('colour-picker').value = rgbToHex(canvasColour[0], canvasColour[1], canvasColour[2]);
+    }
+}
+
+function updateCanvasColourValueHex(hex) {
+    updateCanvasColourValue(hexToRgb(hex.substring(1)));
+}
+
 
 function rgbToHex(red, green, blue) {
     var r = Number(red).toString(16);
@@ -63,6 +80,11 @@ function showOptionsMenu(value) {
 function randomColour() {
     var randomColourValue = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
     updateColoursValue(randomColourValue);
+}
+
+function randomCanvasColour() {
+    var randomColourValue = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
+    updateCanvasColourValue(randomColourValue);
 }
 
 function setTool(toolIn) {

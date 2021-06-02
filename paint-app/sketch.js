@@ -4,16 +4,16 @@ var strokeColourArray;
 var strokeColour;
 var thickness;
 var colourAlpha;
-
+var canvasColour = 255;
+var canvasColourArray;
 
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
-  background(255);
+  background(canvasColour);
   noStroke();
   strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
   thickness = document.getElementById('thickness-slider').value;
-  //colourAlpha = document.getElementById('colour-alpha-slider').value;
 }
 
 
@@ -34,6 +34,11 @@ function mouseDragged() {
 		endShape();
 	}
 	
+}
+
+function changeCanvasColour() {
+	canvasColour = color(canvasColourArray[0], canvasColourArray[1], canvasColourArray[2]);
+	background(canvasColour);
 }
 
 function mousePressed() {
