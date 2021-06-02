@@ -64,6 +64,7 @@ function showOptionsMenu(value) {
 
 function randomColour() {
     var randomColourValue = [Math.floor(Math.random * 255), Math.floor(Math.random * 255), Math.floor(Math.random * 255)];
+    alert(randomColourValue);
     updateColoursValue(randomColourValue);
 }
 
@@ -82,10 +83,13 @@ document.addEventListener('keydown', function(event) {
     else if (event.key == 's') {
         tool = "shape";
     }
-    if (event.key == 'm') {
+    else if (event.key == 'm') {
         showOptionsMenu(optionsMenuShown);
     }
-    if (event.key == 'h') {
+    else if (event.key == 'h') {
         document.getElementById('help').style.display='none';
+    }
+    else if (event.key == 'r') {
+        randomColour();
     }
 });
