@@ -4,7 +4,7 @@ var strokeColourArray;
 var strokeColour;
 var thickness;
 var colourAlpha;
-var canvasColour = 255;
+var canvasColour;
 var canvasColourArray;
 
 
@@ -14,6 +14,7 @@ function setup() {
   noStroke();
   strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
   thickness = document.getElementById('thickness-slider').value;
+  canvasColour = color(255, 255, 255);
 }
 
 function draw() {
@@ -27,6 +28,12 @@ function mouseDragged() {
 	  strokeWeight(thickness);
 	  
 	  line(pmouseX, pmouseY, mouseX, mouseY);
+	}
+	else if (tool == "eraser") {
+		stroke(red(canvasColour), green(canvasColour), blue(canvasColour));
+		strokeWeight(thickness);
+
+		line(pmouseX, pmouseY, mouseX, mouseY);
 	}
 	else if (tool == "shape") {
 		vertices.push(createVector(mouseX, mouseY));
