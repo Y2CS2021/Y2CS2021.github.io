@@ -13,9 +13,6 @@ function setup() {
   thickness = document.getElementById('thickness-slider').value;
 }
 
-function draw() {
-	console.log(thickness);
-}
 
 function mouseDragged() {
 	if (tool == "pen") {
