@@ -23,9 +23,14 @@ function draw() {
 
 function mouseDragged() {
 	if (tool == "pen") {
-	  strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
-	  stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
-	  strokeWeight(thickness);
+		if (strokeColourArray.length > 0) {
+			strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
+		}
+		else {
+			strokeColour = color(0, 0, 0);
+		}
+		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
+		strokeWeight(thickness);
 	  
 	  line(pmouseX, pmouseY, mouseX, mouseY);
 	}
