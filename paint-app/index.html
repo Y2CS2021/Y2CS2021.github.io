@@ -12,7 +12,7 @@
     <options id='options'>
         <h3 class="options-header">Colours</h3>
         <div class="colour-options-container">
-          <input type="color" id="colour-picker" oninput="updateColoursValue(color(this.value))"><br>
+          <input type="color" id="colour-picker" oninput="updateColoursValueHex(this.value)"><br>
           <input type="range" id="colour-alpha-slider" min="0" max="255" oninput="updateAlphaValue(this.value)">
           <button oninput="randomColour()">RANDOM</button>
         </div>
