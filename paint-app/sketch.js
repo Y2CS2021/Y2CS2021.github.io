@@ -9,7 +9,7 @@ function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
   background(255);
   noStroke();
-  strokeColour = color(document.getElementById('colour-picker').value);
+  strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
   thickness = document.getElementById('thickness-slider').value;
 }
 
