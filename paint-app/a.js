@@ -16,8 +16,26 @@ function updateThicknessValue(value) {
 
 function updateColoursValue(value) {
     strokeColour = value;
-    alert(strokeColour);
+    document.getElementById('colour-picker').value = rgbToHex(strokeColour.red, strokeColour.green, strokeColour.blue);
 }
+
+function rgbToHex(red, green, blue) {
+    var r = Number(red).toString(16);
+    if (r.length < 2) {
+        r = "0" + r;
+    }
+    var g = Number(green).toString(16);
+    if (g.length < 2) {
+        g = "0" + g;
+    }
+    var b = Number(blue).toString(16);
+    if (b.length < 2) {
+        b = "0" + b;
+    }
+    return r + g + b;
+
+}
+
 
 function updateAlphaValue(value) {
     colourAlpha = value;
@@ -33,8 +51,9 @@ function showOptionsMenu(value) {
     optionsMenuShown = !optionsMenuShown;
 }
 
-function randomColour(value) {
-    strokeColour = value;
+function randomColour() {
+    var randomColourValue = color(random(0, 255), random(0, 255), random(0, 255));
+    updateColoursValue = randomColourValue;
 }
 
 function setTool(toolIn) {
