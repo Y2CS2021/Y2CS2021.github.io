@@ -64,7 +64,7 @@ function showOptionsMenu(value) {
 
 function randomColour() {
     alert("ACTIVATED")
-    var randomColourValue = [Math.floor(Math.random * 255), Math.floor(Math.random * 255), Math.floor(Math.random * 255)];
+    var randomColourValue = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
     alert(randomColourValue);
     updateColoursValue(randomColourValue);
 }
