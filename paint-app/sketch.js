@@ -16,6 +16,9 @@ function setup() {
   thickness = document.getElementById('thickness-slider').value;
 }
 
+function draw() {
+	document.getElementById('test').innerHTML = tool;
+}
 
 function mouseDragged() {
 	if (tool == "pen") {
@@ -49,12 +52,12 @@ function mousePressed() {
 }
 function mouseReleased() {
 	if (tool == "line") {
-    end = createVector(mouseX, mouseY);
-	stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
-	strokeWeight(thickness);
-	alert(thickness);
-	alert(rgb(red(strokeColour), green(strokeColour), blue(strokeColour)));
-    line(start.x, start.y, end.x, end.y);
-  }
+		end = createVector(mouseX, mouseY);
+		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
+		strokeWeight(thickness);
+		alert(thickness);
+		alert(rgb(red(strokeColour), green(strokeColour), blue(strokeColour)));
+		line(start.x, start.y, end.x, end.y);
+  	}
 
 }
