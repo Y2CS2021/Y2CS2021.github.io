@@ -10,6 +10,7 @@ var vertices = [];
 console.log(colourAlpha);
 
 function updateThicknessValue(value) {
+    alert(thickness + "VAlue:" + value);
     thickness = value;
 }
 
