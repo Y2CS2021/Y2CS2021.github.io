@@ -63,7 +63,7 @@ function showOptionsMenu(value) {
 }
 
 function randomColour() {
-    var randomColourValue = [random(0, 255), random(0, 255), random(0, 255)];
+    var randomColourValue = [Math.floor(Math.random * 255), Math.floor(Math.random * 255), Math.floor(Math.random * 255)];
     updateColoursValue(randomColourValue);
 }
 

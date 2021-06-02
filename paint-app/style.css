@@ -14,7 +14,7 @@ options {
   height: 100%;
   display: none;
   z-index: 1;
-  background-color: red;
+  background-color: #f58634;
   position: fixed;
   color: 255, 0, 0;
 }
@@ -46,4 +46,11 @@ div.inner-content {
 
 p {
   color: black;
+}
+
+button {
+  background-color: green;
+  border: none;
+  text-align: center;
+  color: white;
 }
