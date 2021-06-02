@@ -1,5 +1,6 @@
 var start;
 var end;
+var strokeColour;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
@@ -10,7 +11,7 @@ function setup() {
 
 function mouseDragged() {
 	if (tool == "pen") {
-	  var strokeColour = color(lineColour);
+	  strokeColour = color(lineColour);
 	  stroke(red(strokeColour), green(strokeColour), blue(strokeColour), colourAlpha);
 	  strokeWeight(thickness);
 	  
