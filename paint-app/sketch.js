@@ -3,6 +3,8 @@ var end;
 var strokeColourArray;
 var strokeColour;
 var thickness;
+var colourAlpha;
+
 
 
 function setup() {
@@ -11,6 +13,7 @@ function setup() {
   noStroke();
   strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
   thickness = document.getElementById('thickness-slider').value;
+  colourAlpha = document.getElementById('colour-alpha-slider').value;
 }
 
 

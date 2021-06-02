@@ -9,6 +9,7 @@
   </head>
   <body>
     <options id='options'>
+      <div class="colour-options options-div">
         <h3 class="options-header">Colours</h3>
         <div class="colour-options-container">
           <input type="color" id="colour-picker" oninput="updateColoursValueHex(this.value)"><br>
@@ -28,7 +29,9 @@
         <select>
         	<option onchange="setTool('pen')">Pen</option>
         	<option onchange="setTool('line')">Line</option>
-        	<option onchange="setTool('shape')">Shape</option>
+        	<!--  <option onchange="setTool('shape')">Shape</option> -->
+          <option onchange="setTool('eraser')">Eraser</option>
+
         </select>
         </div>
       </div>
@@ -41,7 +44,8 @@
           Press 'm' to show/hide the menu.<br>
           Press 'p' to switch to the Pen tool.<br>
           Press 'l' to switch to the Line tool.<br>
-          Press 's' to switch to the Shape tool.<br>
+          Press 'e' to switch to the Eraser tool.
+          <!-- Press 's' to switch to the Shape tool.<br> -->
         </p>
       </div>
     </div>

@@ -21,6 +21,7 @@ options {
 
 options-div {
   display: block;
+  padding: 10px;
 }
 
 div.dark-background {

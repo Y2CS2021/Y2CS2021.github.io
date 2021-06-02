@@ -2,12 +2,10 @@ var canvasWidth = screen.width;
 var canvasHeight = screen.height;
 var happy = "DIE";
 var optionsMenuShown = false;
-var colourAlpha = document.getElementById('colour-alpha-slider').value;
 var lineColour = document.getElementById('colour-picker').value;
 var tool = "pen";
 var vertices = [];
 
-console.log(colourAlpha);
 
 function updateThicknessValue(value) {
     thickness = value;
@@ -81,6 +79,9 @@ document.addEventListener('keydown', function(event) {
     }
     else if (event.key == 's') {
         tool = "shape";
+    }
+    else if (event.key == 'e') {
+        tool = "eraser";
     }
     else if (event.key == 'm') {
         showOptionsMenu(optionsMenuShown);
