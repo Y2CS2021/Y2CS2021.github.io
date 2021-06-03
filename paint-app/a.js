@@ -126,7 +126,7 @@ function setTool(toolIn) {
             case "eraser":
                 document.getElementsByTagName('canvas')[0].style.cursor = "url('eraser.png'), auto";
                 break;
-
+                
         }
     }
     else {
@@ -156,9 +156,11 @@ document.addEventListener('keydown', function(event) {
 	else if (event.key == 'p') {
 		setTool("pen");
     }
+    /*
     else if (event.key == 's') {
         setTool("shape");
     }
+    */
     else if (event.key == 'e') {
         setTool("eraser");
     }
