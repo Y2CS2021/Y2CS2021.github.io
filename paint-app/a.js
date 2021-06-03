@@ -32,6 +32,8 @@ function updateColoursValue(value, type) {
             break;
         case "menu":
             menuColourArray = value;
+            var menuColourHex = rgbToHex(menuColourArray[0], menuColourArray[1], menuColourArray[2]);
+            document.getElementsByTagName("options")[0].style.color = menuColourHex;
             break;
         default:
             strokeColourArray = value;

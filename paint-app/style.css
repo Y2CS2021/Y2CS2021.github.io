@@ -57,6 +57,10 @@ div#menuColour {
   display: none;
 }
 
+div.textInput {
+  box-sizing: border-box;
+}
+
 p {
   color: black;
 }
