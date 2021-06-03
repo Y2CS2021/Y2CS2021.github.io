@@ -20,7 +20,7 @@ function setup() {
 
 function draw() {
 	document.getElementById('test').innerHTML = thickness;
-	console.log(strokeColourArray);
+	console.log(colourAlpha);
 }
 
 function mouseDragged() {
@@ -31,7 +31,10 @@ function mouseDragged() {
 		else {
 			strokeColour = color(0, 0, 0);
 		}
-		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
+		let finalColour = color(red(strokeColour), green(strokeColour), blue(strokeColour));
+		if (colourAlpha != null) 
+			finalColour.setAlpha(colourAlpha);
+		stroke(finalColour);
 		strokeWeight(thickness);
 	  
 	  line(pmouseX, pmouseY, mouseX, mouseY);
