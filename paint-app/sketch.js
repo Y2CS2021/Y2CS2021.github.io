@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-	document.getElementById('test').innerHTML = tool;
+	document.getElementById('test').innerHTML = thickness;
 }
 
 function mouseDragged() {

@@ -90,7 +90,6 @@ function randomCanvasColour() {
 function setTool(toolIn) {
     if (toolIn != null) {
         tool = toolIn;
-        alert("In:" + toolIn + "Tool" + tool);
     }
     else {
         var index = document.getElementById("toolSelect").selectedIndex;
@@ -106,7 +105,6 @@ function setTool(toolIn) {
                 break;
 
         }
-        alert(tool);
     }
 }
 
