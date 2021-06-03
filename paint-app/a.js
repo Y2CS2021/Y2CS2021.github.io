@@ -41,10 +41,7 @@ function updateColoursValue(value, type) {
     }
 }
 
-function downloadCanvas() {
-    var name = prompt("File name:");
-    saveCanvas();
-}
+
 
 function updateColoursValueHex(hex, type) {
     if (hex.length == 7 && hex.charAt(0) == "#") {
