@@ -133,4 +133,7 @@ document.addEventListener('keydown', function(event) {
     else if (event.key == 'r') {
         randomColour();
     }
+    else if (event.key == 'c') {
+        clearCanvas();
+    }
 });
