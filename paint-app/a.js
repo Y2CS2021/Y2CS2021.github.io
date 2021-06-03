@@ -41,6 +41,11 @@ function updateColoursValue(value, type) {
     }
 }
 
+function downloadCanvas() {
+    var name = prompt("File name:");
+    saveCanvas();
+}
+
 function updateColoursValueHex(hex, type) {
     if (hex.length == 7 && hex.charAt(0) == "#") {
         if (type == "menu") {
@@ -103,12 +108,12 @@ function showMenuColourOptions(value) {
 
 function randomColour() {
     var randomColourValue = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
-    updateColoursValue(randomColourValue);
+    updateColoursValue(randomColourValue, "brush");
 }
 
 function randomCanvasColour() {
     var randomColourValue = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
-    updateCanvasColourValue(randomColourValue);
+    updateColoursValue(randomColourValue, "canvas");
 }
 
 function setTool(toolIn) {

@@ -56,6 +56,11 @@ function mouseDragged() {
 	
 }
 
+function downloadCanvas() {
+    var name = prompt("File name:");
+    saveCanvas(name, 'jpg');
+}
+
 function changeCanvasColour() {
 	if (canvasColourArray != null && canvasColourArray.length > 0) {
 		canvasColour = color(canvasColourArray[0], canvasColourArray[1], canvasColourArray[2]);
