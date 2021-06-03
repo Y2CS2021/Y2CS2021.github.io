@@ -9,6 +9,10 @@ canvas {
   position: fixed;
 }
 
+input {
+  padding: 5px;
+}
+
 options {
   width: 15%;
   height: 100%;
@@ -17,6 +21,7 @@ options {
   background-color: #f58634;
   position: fixed;
   color: 255, 0, 0;
+  padding: 10px;
 }
 
 options-div {
