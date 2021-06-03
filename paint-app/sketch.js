@@ -18,10 +18,6 @@ function setup() {
   canvasColour = color(255, 255, 255);
 }
 
-function draw() {
-	document.getElementById('test').innerHTML = thickness;
-	console.log(colourAlpha);
-}
 
 function mouseDragged() {
 	if (tool == "pen") {
