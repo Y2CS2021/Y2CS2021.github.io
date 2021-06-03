@@ -12,12 +12,13 @@ canvas {
 
 input {
   padding: 5px;
+  border: 5px outset black;
 }
 
 options {
   width: 15%;
   height: 100%;
-  display: none;
+  display: block;
   z-index: 1;
   background-color: #f58634;
   position: fixed;
