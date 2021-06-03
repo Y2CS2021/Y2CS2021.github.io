@@ -78,7 +78,6 @@ function mouseReleased() {
 		end = createVector(mouseX, mouseY);
 		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
 		strokeWeight(thickness);
-		alert(strokeColour);
 		line(start.x, start.y, end.x, end.y);
   	}
 
