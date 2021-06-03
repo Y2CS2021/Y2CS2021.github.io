@@ -100,7 +100,7 @@ function setTool(toolIn) {
                 break;
             case 1:
                 tool = "line";
-                document.getElementsByTagName('canvas')[0].style.cursor = "crosshair";
+                document.getElementsByTagName('canvas')[0].style.cursor = "cell";
                 break;
             case 2:
                 tool = "eraser";
