@@ -96,12 +96,15 @@ function setTool(toolIn) {
         switch(index) {
             case 0:
                 tool = "pen";
+                document.getElementsByTagName('canvas')[0].style.cursor = "crosshair";
                 break;
             case 1:
                 tool = "line";
+                document.getElementsByTagName('canvas')[0].style.cursor = "crosshair";
                 break;
             case 2:
                 tool = "eraser";
+                document.getElementsByTagName('canvas')[0].style.cursor = "url('eraser.png'), auto;";
                 break;
 
         }
