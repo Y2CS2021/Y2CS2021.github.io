@@ -53,6 +53,10 @@ div.inner-content {
   text-align: center;
 }
 
+div#menuColour {
+  display: none;
+}
+
 p {
   color: black;
 }

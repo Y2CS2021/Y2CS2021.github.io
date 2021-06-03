@@ -2,40 +2,56 @@ var canvasWidth = screen.width;
 var canvasHeight = screen.height;
 var happy = "DIE";
 var optionsMenuShown = true;
+var menuColourShown = false;
 var lineColour = document.getElementById('colour-picker').value;
 var tool = "pen";
 var vertices = [];
+var menuColourArray = [];
 
 
 function updateThicknessValue(value) {
     thickness = value;
 }
 
-function updateColoursValue(value) {
-    strokeColourArray = value;
-    document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
-}
-
-function updateColoursValueHex(hex) {
-    updateColoursValue(hexToRgb(hex.substring(1)));
-}
-
-
-function updateCanvasColourValue(value) {
-    var confirmation = confirm("Changing the canvas colour will delete the current canvas. Are you sure you want to continue?");
-    if (confirm) {
-        canvasColourArray = value;
-        changeCanvasColour();
-        document.getElementById('canvas-colour-picker').value = rgbToHex(value[0], value[1], value[2]);
+function updateColoursValue(value, type) {
+    switch (type) {
+        case "brush":
+            strokeColourArray = value;
+            document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
+            break;
+        case "canvas":
+            var confirmation = confirm("Changing the canvas colour will delete the current canvas. Are you sure you want to continue?");
+            if (confirmation) {
+                canvasColourArray = value;
+                changeCanvasColour();
+                document.getElementById('canvas-colour-picker').value = rgbToHex(value[0], value[1], value[2]);
+            }
+            else {
+                document.getElementById('canvas-colour-picker').value = rgbToHex(canvasColour[0], canvasColour[1], canvasColour[2]);
+            }
+            break;
+        case "menu":
+            menuColourArray = value;
+            break;
+        default:
+            strokeColourArray = value;
+            document.getElementById('colour-picker').value = rgbToHex(value[0], value[1], value[2]);
     }
-    else {
-        document.getElementById('canvas-colour-picker').value = rgbToHex(canvasColour[0], canvasColour[1], canvasColour[2]);
+}
+
+function updateColoursValueHex(hex, type) {
+    if (hex.length == 7 && hex.charAt(0) == "#") {
+        if (type == "menu") {
+            document.getElementById('indicator').setAttribute("src", "valid.png");
+        }
+        updateColoursValue(hexToRgb(hex.substring(1)), type);
+    }
+    else if (type == "menu") {
+        document.getElementById('indicator').setAttribute("src", "invalid.png");
     }
 }
 
-function updateCanvasColourValueHex(hex) {
-    updateCanvasColourValue(hexToRgb(hex.substring(1)));
-}
+
 
 
 function rgbToHex(red, green, blue) {
@@ -75,6 +91,12 @@ function showOptionsMenu(value) {
     var optionsMenu = document.getElementById('options');
     value ? optionsMenu.style.display = 'none' : value == null ? optionsMenu.style.display = optionsMenuShown ? 'none' : 'block' : optionsMenu.style.display = 'block';
     optionsMenuShown = !optionsMenuShown;
+}
+
+function showMenuColourOptions(value) {
+    var menuColour = document.getElementById('menuColour');
+    value ? menuColour.style.display = 'none' : value == null ? menuColour.style.display = menuColourShown ? 'none' : 'block' : menuColour.style.display = 'block';
+    menuColourShown = !menuColourShown;
 }
 
 function randomColour() {

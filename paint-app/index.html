@@ -12,7 +12,7 @@
       <div class="colour-options options-div">
         <h3 class="options-header">Brush Colour</h3>
         <div class="colour-options-container">
-          <input type="color" id="colour-picker" oninput="updateColoursValueHex(this.value)"><br>
+          <input type="color" id="colour-picker" oninput="updateColoursValueHex(this.value, 'brush')"><br>
           <input type="range" id="colour-alpha-slider" min="0" max="255" oninput="updateAlphaValue(this.value)">
           <button onclick="randomColour()">RANDOM</button>
         </div>
@@ -25,7 +25,7 @@
       </div>
       <div class="canvas-colour-options options-div">
         <h3 class="options-header">Canvas Colour</h3>
-          <input type="color" id="canvas-colour-picker" oninput="updateCanvasColourValueHex(this.value)"><br>
+          <input type="color" id="canvas-colour-picker" oninput="updateColoursValueHex(this.value, 'canvas')"><br>
           <button onclick="randomCanvasColour()">RANDOM</button>
         <div class="canvas-colour-options-container">
         </div>
@@ -45,6 +45,21 @@
         <h3 class="options-header">Other</h3>
         <div class="other-options-container">
           <button onclick="clearCanvas()">Clear Canvas</button>
+          <button onclick="showMenuColourOptions(menuColourShown)">Change Menu Colour</button>
+          <div id="menuColour">
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#ff0000', 'menu')">Red</button>
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#ffffff', 'menu')">White</button>
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#f58634', 'menu')">Orange</button>
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#00ff00', 'menu')">Green</button>
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#0000ff', 'menu')">Blue</button>
+            <button class="menuColourButtons" onclick="updateColoursValueHex('#808080', 'menu')">Gray/Grey</button>
+            <div>
+              <label for="customMenuColour">Type in a custom colour</label>
+              <input type="text" name="customMenuColour" placeholder="#000000" oninput="updateColoursValueHex(this.value, 'menu')">
+              <img src="invalid.png" width="50%" height="50%" id="indicator">
+            </div>
+          </div>
+
         </div>
       </div>
     </options>
