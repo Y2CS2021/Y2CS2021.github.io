@@ -62,10 +62,6 @@ div.textInput {
   box-sizing: border-box;
 }
 
-p {
-  color: black;
-}
-
 button {
   background-color: green;
   border: none;
@@ -87,7 +83,6 @@ button:hover {
   background-color: darkgreen;
 }
 
-#test {
-  margin: auto;
-  position: absolute;
+#help:active {
+  cursor: help;
 }
