@@ -24,6 +24,7 @@ options {
   position: fixed;
   color: 255, 0, 0;
   padding: 10px;
+  overflow: auto;
 }
 
 options-div {
