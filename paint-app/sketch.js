@@ -10,6 +10,7 @@ var canvasColourArray;
 
 function setup() {
   canvas = createCanvas(canvasWidth, canvasHeight);
+  canvasColour = color(255, 255, 255);
   background(canvasColour);
   noStroke();
   strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
@@ -24,7 +25,7 @@ function draw() {
 
 function mouseDragged() {
 	if (tool == "pen") {
-		if (strokeColourArray.length > 0) {
+		if (strokeColourArray != null && strokeColourArray.length > 0) {
 			strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
 		}
 		else {
@@ -53,7 +54,7 @@ function mouseDragged() {
 }
 
 function changeCanvasColour() {
-	if (canvasColourArray.length > 0) {
+	if (canvasColourArray != null && canvasColourArray.length > 0) {
 		canvasColour = color(canvasColourArray[0], canvasColourArray[1], canvasColourArray[2]);
 	}
 	background(canvasColour);
