@@ -79,7 +79,18 @@ function mousePressed() {
 function mouseReleased() {
 	if (tool == "line") {
 		end = createVector(mouseX, mouseY);
-		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
+
+		if (strokeColourArray != null && strokeColourArray.length > 0) {
+			strokeColour = color(Number(strokeColourArray[0]), Number(strokeColourArray[1]), Number(strokeColourArray[2]));
+		}
+		else {
+			strokeColour = color(0, 0, 0);
+		}
+
+		let finalColour = color(red(strokeColour), green(strokeColour), blue(strokeColour));
+		if (colourAlpha != null) 
+			finalColour.setAlpha(colourAlpha);
+		stroke(finalColour);
 		strokeWeight(thickness);
 		line(start.x, start.y, end.x, end.y);
   	}
