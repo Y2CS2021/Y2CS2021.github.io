@@ -76,7 +76,7 @@ function mousePressed() {
 function mouseReleased() {
 	if (tool == "line") {
 		end = createVector(mouseX, mouseY);
-		//stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
+		stroke(red(strokeColour), green(strokeColour), blue(strokeColour));
 		strokeWeight(thickness);
 		alert(strokeColour);
 		line(start.x, start.y, end.x, end.y);
