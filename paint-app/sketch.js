@@ -19,6 +19,7 @@ function setup() {
 
 function draw() {
 	document.getElementById('test').innerHTML = thickness;
+	console.log(strokeColourArray);
 }
 
 function mouseDragged() {
