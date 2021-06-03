@@ -33,7 +33,7 @@ function updateColoursValue(value, type) {
         case "menu":
             menuColourArray = value;
             var menuColourHex = rgbToHex(menuColourArray[0], menuColourArray[1], menuColourArray[2]);
-            document.getElementsByTagName("options")[0].style.color = menuColourHex;
+            document.getElementsByTagName("options")[0].style.backgroundColor = menuColourHex;
             break;
         default:
             strokeColourArray = value;
@@ -114,6 +114,18 @@ function randomCanvasColour() {
 function setTool(toolIn) {
     if (toolIn != null) {
         tool = toolIn;
+        switch(toolIn) {
+            case "pen":
+                document.getElementsByTagName('canvas')[0].style.cursor = "crosshair";
+                break;
+            case "line":
+                document.getElementsByTagName('canvas')[0].style.cursor = "cell";
+                break;
+            case "eraser":
+                document.getElementsByTagName('canvas')[0].style.cursor = "url('eraser.png'), auto";
+                break;
+
+        }
     }
     else {
         var index = document.getElementById("toolSelect").selectedIndex;
