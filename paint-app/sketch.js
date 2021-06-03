@@ -13,7 +13,7 @@ function setup() {
   background(canvasColour);
   noStroke();
   strokeColourArray = hexToRgb(String(document.getElementById('colour-picker').value).substring(1));
-  thickness = document.getElementById('thickness-slider').value;
+  thickness = 25;
   canvasColour = color(255, 255, 255);
 }
 
