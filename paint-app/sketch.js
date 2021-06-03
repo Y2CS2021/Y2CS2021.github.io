@@ -58,7 +58,7 @@ function mouseDragged() {
 
 function downloadCanvas() {
     var name = prompt("File name:");
-	var fileType = prompt("File Type:");
+	var fileType = prompt("File Type: (png/jpg)");
     saveCanvas(name, fileType != null ? filetype : 'jpg');
 }
 

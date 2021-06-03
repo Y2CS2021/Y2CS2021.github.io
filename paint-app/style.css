@@ -81,7 +81,7 @@ button.menuColourButtons {
   border-radius: 30%;
 }
 
-button.menuColourButtons:hover {
+button:hover {
   background-color: darkgreen;
 }
 
